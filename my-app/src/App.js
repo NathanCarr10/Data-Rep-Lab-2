@@ -22,7 +22,6 @@ function App() {
       <Route path= "/" element={<Content/>}/>
       <Route path= "/Read" element={<Read/>}/>
       <Route path= "/Create" element={<Create/>}/>
-      <Route path= "/Movies" element={<Movies/>}/>
       </Routes>
       <Footer />
     </Router>

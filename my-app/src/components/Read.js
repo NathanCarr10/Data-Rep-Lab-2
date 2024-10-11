@@ -1,3 +1,4 @@
+import Movies from "./Movies"
 const Read = ()=>{
    const data = [
         {
@@ -25,7 +26,8 @@ const Read = ()=>{
 
     return (
         <div>
-           <h3> Hello from read component </h3> 
+           <h3> Hello from read component </h3>
+           <Movies myMovies={data}/> 
         </div>
     )
 }
