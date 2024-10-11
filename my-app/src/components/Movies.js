@@ -1,11 +1,14 @@
+import MovieItem from "./movieitem";
+
 const Movies = (props )=>{
 
-    return (
-        <div>
-            <h3>Hello from movies</h3>
-            {console.log(props.myMovies)}
-        </div>
-    )
+    return props.MovieItem.map(
+        (movie)=>{
+            return <MovieItem mymovie={movie}/>
+        }
+
+    );
+    
 
 }
 export default Movies;
