@@ -1,5 +1,7 @@
+// Importing the Movies component from the same directory
 import Movies from "./Movies"
 const Read = ()=>{
+  // Defining an array of movie objects containing details like title, year, imdbID, and poster URL
    const data = [
         {
           "Title": "Avengers: Infinity War",
@@ -26,9 +28,12 @@ const Read = ()=>{
 
     return (
         <div>
+          {/* Displaying a heading */}
            <h3> Hello from read component </h3>
+           {/* Passing the movie data (data array) as a prop (myMovies) to the Movies component */}
            <Movies myMovies={data}/> 
         </div>
     )
 }
+//Exporting the Read component so it can be used in other parts of the application
 export default Read;

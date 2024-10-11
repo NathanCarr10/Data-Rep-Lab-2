@@ -8,7 +8,5 @@ const Movies = (props )=>{
         }
 
     );
-    
-
 }
 export default Movies;
