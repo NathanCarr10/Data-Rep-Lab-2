@@ -4,6 +4,7 @@ import {useState} from "react";
 const Create = ()=>{
     
     const [title, setTitle] = useState('');
+    const [movieYear, setmovieYear] = useState ('');
 
     const handleSubmit =(e)=>{
         e.preventDefault();
@@ -21,6 +22,13 @@ const Create = ()=>{
                 value={title}
                 onChange={(e) => { setTitle(e.target.value) }}
               />
+              <label>Add Movie Year: </label>
+              <input type="number"
+                className="form-control"
+                value={title}
+                onChange={(e) => { setTitle(e.target.value) }}
+              />
+
             </div>
             <input type="submit" value="Add Movie" />
           </form>
