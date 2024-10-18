@@ -29,6 +29,14 @@ const Create = ()=>{
                 onChange={(e) => { setTitle(e.target.value) }}
               />
 
+              <label>Add Movie Poster: </label>
+              <input type="text"
+                className="form-control"
+                value={title}
+                onChange={(e) => { setTitle(e.target.value) }}
+              />
+
+
             </div>
             <input type="submit" value="Add Movie" />
           </form>
