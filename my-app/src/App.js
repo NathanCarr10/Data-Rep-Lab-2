@@ -10,6 +10,7 @@ import Content from './components/Content';
 import Read from './components/Read';
 import Create from './components/Create';
 import Movies from './components/Movies';
+import Edit from './components/edit'; 
 
 
 
@@ -28,6 +29,8 @@ function App() {
       <Route path= "/" element={<Content/>}/>
       {/* Route for the "Read" page, rendering the Read component */}
       <Route path= "/Read" element={<Read/>}/>
+      {/* Route for Edit file, rendering the Edit component */}
+      <Route path="/edit/:id" element={<Edit/>} />
       {/* Route for the "Create" page, rendering the Create component */}
       <Route path= "/Create" element={<Create/>}/>
       </Routes>

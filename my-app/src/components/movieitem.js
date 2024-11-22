@@ -24,7 +24,7 @@ function MovieItem(props) {
             <footer>{props.mymovie.movieYear}</footer>
           </blockquote>
         </Card.Body>
-        <Link to={"/edit/" + props.mymovie._id} className="btn btn-primary">Edit</Link>
+        <Link className="btn btn-primary" to={"/edit/" + props.mymovie._id}>Edit</Link> {/* code to create an edit button under each movie */}
       </Card>
     </div>
   );
