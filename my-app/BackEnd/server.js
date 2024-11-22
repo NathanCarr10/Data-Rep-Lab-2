@@ -44,7 +44,7 @@ app.get('/api/movies/:id', async(req,res)=>{
   res.json(movies);
 })
 
-
+//Get Method to edit movie with specific ID
 app.get('/api/movie/:id', async (req, res) => {
   let movie = await movieModel.findById({ _id: req.params.id });
   res.send(movie);
@@ -68,6 +68,7 @@ app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
+//Put Method to add update Movie Items from server database
 app.put('/api/movie/:id', async (req, res) => {
   let movie = await movieModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.send(movie);
