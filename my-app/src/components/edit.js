@@ -17,22 +17,22 @@ import React from 'react';
  useEffect(() => { // Axios request objects have a `then()` function, which means you can use them with promise chains and async/await.
      axios.get('http://localhost:4000/api/movie/' + id) //recieves data from localhost:400 which is our server.js file
          .then((response) => {
-             setTitle(response.data.title);
-             setYear(response.data.year);
-             setPoster(response.data.poster);
+             setTitle(response.data.title); //Movie Title variable to updated
+             setYear(response.data.year); // Movie Year to be updated
+             setPoster(response.data.poster); // Movie Poster to be updated
          })
          .catch((error) => { //handles errors
              console.log(error);
          });
  }, [id]);
 
- const handleSubmit = (event) => {
+ const handleSubmit = (event) => { ///Configured Express routes on the server side to handle PUT requests for updating movies in the MongoDB database.
      event.preventDefault();
      const newMovie = { id, title, movieYear, moviePoster };
      axios.put('http://localhost:4000/api/movie/' + id, newMovie)
          .then((res) => {
              console.log(res.data);
-             navigate('/read'); //Navigating to Read page which displays all Movie Items
+             navigate('/read'); //Navigating to Read page which displays all Movie Items, and each updated item
          });
  }
 
