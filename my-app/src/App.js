@@ -30,7 +30,7 @@ function App() {
       {/* Route for the "Read" page, rendering the Read component */}
       <Route path= "/Read" element={<Read/>}/>
       {/* Route for Edit file, rendering the Edit component */}
-      <Route path="/edit/:id" element={<Edit/>} />
+      <Route path="/edit/:id" element={<Edit/>} /> {/*The route allows users to navigate to the Edit component when they want to edit a specific movie.*/}
       {/* Route for the "Create" page, rendering the Create component */}
       <Route path= "/Create" element={<Create/>}/>
       </Routes>
