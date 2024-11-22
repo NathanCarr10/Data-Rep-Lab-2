@@ -45,6 +45,12 @@ app.get('/api/movies/:id', async(req,res)=>{
 })
 
 
+app.get('/api/movie/:id', async (req, res) => {
+  let movie = await movieModel.findById({ _id: req.params.id });
+  res.send(movie);
+});
+
+
 //Added a POST method to the Express server that logs the title, year, and poster URL of the movie object passed from the React app
 app.post('/api/movies',async (req, res) => {
   console.log(req.body.title);
@@ -61,3 +67,8 @@ app.post('/api/movies',async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+app.put('/api/movie/:id', async (req, res) => {
+  let movie = await movieModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  res.send(movie);
+})
