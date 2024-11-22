@@ -1,4 +1,5 @@
 import { useState } from "react"; //useState is React Hook that allows you to add state to a functional component
+import axios from "axios";
 
 // Create component definition
 const Create = () => {
@@ -7,7 +8,7 @@ const Create = () => {
     const [title, setTitle] = useState('');
     const [movieYear, setmovieYear] = useState('');
     const [moviePoster, setmoviePoster] = useState('');
-    
+
 
     //this allows you to handle the submissions
     const handleSubmit = (e) => {
@@ -15,6 +16,13 @@ const Create = () => {
         console.log(title);
         console.log(movieYear);
         console.log(moviePoster);
+        const movie = {title, movieYear, moviePoster};
+        console.log(movie);
+
+        //posts data from server.js file
+        axios.post('http://localhost:4000/api/movies', movie)
+        .then((res) => console.log(res.data))
+        .catch((err) => console.log(err.data));
     }
     //user enters values for movie title, movie year and movie poster url
     return (

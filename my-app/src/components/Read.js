@@ -5,7 +5,7 @@ import axios from "axios"; //Axios helps developers make HTTP requests from Node
 const Read = () => {
   const [movies, setMovies] = useState([])// useState is React Hook that allows you to add state to a functional component
   useEffect(() => {
-    axios.get('https://jsonblob.com/api/jsonblob/1287718524221775872')
+    axios.get('http://localhost:4000/api/movies') //recieves data from localhost:400 which is our server.js file
       .then((response) => { // Axios request objects have a `then()` function, which means you can use them with promise chains and async/await.
         console.log(response.data);
         setMovies(response.data.movies);
