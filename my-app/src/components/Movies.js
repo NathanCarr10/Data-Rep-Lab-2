@@ -7,7 +7,7 @@ const Movies = (props )=>{
     return props.myMovies.map(
         (movie)=>{
             //Return a MovieItem component for each movie in array
-            return <MovieItem mymovie={movie} key={movie._id}/>
+            return <MovieItem mymovie={movie} key={movie._id} Reload={props.ReloadData}/>
         }
 
     );
