@@ -74,6 +74,8 @@ app.put('/api/movie/:id', async (req, res) => {
   res.send(movie);
 })
 
+// Handles DELETE requests by removing the specified movie from the MongoDB database.
+// Sends a success or error response based on the outcome of the operation.
 app.delete('/api/movie/:id', async (req, res) => {
   
   console.log('Deleting movie with ID:', req.params.id);

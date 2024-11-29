@@ -5,6 +5,7 @@ import axios from "axios"; //Axios helps developers make HTTP requests from Node
 const Read = () => {
   const [movies, setMovies] = useState([])// useState is React Hook that allows you to add state to a functional component
 
+  //Reload Function. Defines and manages the Reload function, which fetches updated movie data from the server and updates the state.
   const Reload = () => {
     console.log("Reloading movie data...");
     axios.get('http://localhost:4000/api/movies')

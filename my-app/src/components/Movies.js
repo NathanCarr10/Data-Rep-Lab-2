@@ -7,7 +7,8 @@ const Movies = (props )=>{
     return props.myMovies.map(
         (movie)=>{
             //Return a MovieItem component for each movie in array
-            return <MovieItem mymovie={movie} key={movie._id} Reload={props.ReloadData}/>
+            return <MovieItem mymovie={movie} key={movie._id} Reload={props.ReloadData}/> 
+            // Passes the ReloadData function to child components so they can trigger a refresh after deletion.
         }
 
     );
